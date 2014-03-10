@@ -5,9 +5,12 @@
     it("should convert kilos to pounds", function () {
         expect(converter.kilosToPounds(25)).toBe(55.12)
     })
-    /*it("should be able to deal with strings", function () {
+    it("should reject non numbers", function () {
         expect(function () {
-            Converter.convertFromImperialToMetric("hello")
+            converter.poundsToKilos("hello")
         }).toThrow(new Error("Not a number"));
-    })*/    
+    })
+    it("should be able to deal numbers as strings", function () {
+        expect(converter.kilosToPounds("103")).toBe(227.08)
+    }) 
 })
