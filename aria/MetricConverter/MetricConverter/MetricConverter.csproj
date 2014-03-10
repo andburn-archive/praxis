@@ -65,15 +65,27 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\jasmine.css" />
+    <Content Include="js\main.js" />
+    <Content Include="test\css\jasmine.css" />
+    <Content Include="css\style-mobile.css" />
+    <Content Include="css\style-narrow.css" />
+    <Content Include="css\style-wide.css" />
+    <Content Include="css\style.css" />
+    <Content Include="index.html" />
+    <Content Include="js\skel.min.js" />
+    <Content Include="js\skel.setup.js" />
     <Content Include="packages.config" />
-    <None Include="Scripts\jquery-2.1.0.intellisense.js" />
-    <Content Include="Scripts\jasmine-html.js" />
-    <Content Include="Scripts\jasmine.js" />
-    <Content Include="Scripts\jquery-2.1.0.js" />
-    <Content Include="Scripts\jquery-2.1.0.min.js" />
+    <None Include="js\jquery-2.1.0.intellisense.js" />
+    <Content Include="test\js\boot.js" />
+    <Content Include="test\js\console.js" />
+    <Content Include="test\js\jasmine-html.js" />
+    <Content Include="test\js\jasmine.js" />
+    <Content Include="js\jquery-2.1.0.js" />
+    <Content Include="js\jquery-2.1.0.min.js" />
+    <Content Include="test\spec\specs.js" />
+    <Content Include="test\test.html" />
     <Content Include="Web.config" />
-    <Content Include="Scripts\jquery-2.1.0.min.map" />
+    <Content Include="js\jquery-2.1.0.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
