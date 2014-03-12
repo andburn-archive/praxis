@@ -3,6 +3,7 @@
 <head>
     <title>Metric Converter</title>
     <!--<link href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css" rel="stylesheet" />-->
+    <link href="css/main.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container">
@@ -12,20 +13,31 @@
                 <h1>Metric Converter</h1>
             </div>
         </div>
-        <!-- Hero -->
-        <section id="hero">
-            <h2>Convert</h2>
-            <input type="text" id="convert-value" />
-            <select id="convert-from">
-                <option>pounds</option>
-                <option>kilos</option>
-            </select>
-            <select id="convert-to">
-                <option>pounds</option>
-                <option>kilos</option>
-            </select>
-            <input type="text" id="converted-value" />
-        </section>
+        <!--Coverter -->
+        <div class="row" id="con-block">
+            <div class="4u">
+                <label for="convert-value">Value</label>
+                <input type="text" id="convert-value" class="targets" />
+            </div>
+            <div class="2u">
+                <label for="convert-from">From</label>
+                <select id="convert-from" class="targets">
+                    <option>pounds</option>
+                    <option>kilos</option>
+                </select>
+            </div>
+            <div class="2u">
+                <label for="convert-to">To</label>
+                <select id="convert-to" class="targets">
+                    <option>pounds</option>
+                    <option>kilos</option>
+                </select>
+            </div>
+            <div class="4u">
+                <label for="converted-value">Conversion</label>
+                <input type="text" id="converted-value" disabled />
+            </div>
+        </div>
     </div>
 
     <!-- Javascript imports -->

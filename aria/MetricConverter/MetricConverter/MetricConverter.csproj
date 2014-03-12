@@ -66,6 +66,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\main.css" />
     <Content Include="js\converter.js" />
     <Content Include="js\main.js" />
     <Content Include="test\css\jasmine.css" />

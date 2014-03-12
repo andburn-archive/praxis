@@ -15,6 +15,10 @@
         console.log("to blur");
     });
 
+    $(".targets").change(function () {
+        getValues();
+        console.log("change");
+    });
 
     function getValues() {
         var to = $("#convert-to").val();
