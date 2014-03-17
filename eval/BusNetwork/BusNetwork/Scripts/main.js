@@ -6,4 +6,8 @@
         $("#textout").html(textin);
     });
 	// what happens next
+	
+	// need to get schedule via text box
+	
+	// generate route map
 });
