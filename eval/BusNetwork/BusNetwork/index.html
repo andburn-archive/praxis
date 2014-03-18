@@ -11,11 +11,51 @@
         <textarea id="textin">Stuff goes here</textarea>
         <br /><button id="btn_start">Go</button>
     </form>
-    <div id="textout">
-
-    </div>
+    <div id="textout"></div>
 
     <script src="Scripts/jquery-2.1.0.js"></script>
     <script src="Scripts/main.js"></script>
 </body>
 </html>
+
+<!--
+    
+    You just moved to a new city where the main mode of transportation is by bus. 
+    You noticed that for each bus route, a bus takes exactly 7 minutes to ride between the adjacent stops. 
+    It also takes 12 minutes for you to change a bus. To make better use of your time, you need to write a 
+    program to get you from point A to point B in the least amount of time, using a list of bus route below. 
+
+    The bus route Ri is represented as a list of IDs of a bus stops in order they appear on the route. 
+    The change of a bus is possible only on a stop with the same ID. E.g. 
+        R1=[1,2,3,4]; R2=[5,6,4]; R3=[9,6,7]; R4=[12,1,2,3,11,16,15,14,10,7]
+
+    Using these routes to get from point 1 to point 7 you can start from bus route R1, and ride to a stop with ID=4, 
+    then you need a change from R1 to R2 to reach the stop with ID=6, then another change to R3 to arrive at ID=7. 
+    Or you can simply take a bus R4 occupy a seat, relax and ride through all of the route straight to a stop with ID=7. 
+    But your goal is to figure out the fastest route possible. 
+
+    INPUT:
+    Your program should accept as its first argument a path to a filename. Each line in this file is one test case. 
+    Each test case will contain the points A and B in a brackets, and the list of routes separated by a semicolon. E.g. 
+    
+        (2,4); R1=[1,2,3,11,12,4]; R2=[5,6,4]; R3=[1,6,7]; R4=[5,6,4]; R5=[8,6,3]
+        (1,7); R1=[1,2,3,4]; R2=[5,6,4]; R3=[9,6,7]; R4=[12,1,2,3,11,16,15,14,10,13,7]
+        (3,299); R1=[1,2,3,4]; R2=[6,7,19,12,4]; R3=[11,14,16,6]; R4=[24,299,42,6]
+        (3,4); R1=[1,2,3]; R2=[6,7,19,12,4]; R3=[11,14,16,6]
+
+    OUTPUT:
+    For each test case print out minimum time in minutes needed to get from a point A to a point B using a given bus routes. 
+    Print out "None" if there is no connection between these two points. 
+
+        28
+        59
+        73
+        None
+    
+    Constraints: 
+
+    The number of routes is in range [3, 150]. 
+    The IDs are in range [0, 300]. 
+    The length of a route is in range of [10, 35] stops. 
+
+-->
