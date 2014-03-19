@@ -1,5 +1,6 @@
 ﻿$(document).ready(function () {
 
+    
     $("#btn_start").on("click", function (event) {
         event.preventDefault();
         var textin = $("#textin").val().split("\n");
