@@ -22,22 +22,26 @@
                 console.log("addStop: (" + stop + ") adding terminal connection");
             }            
         } else {
-            // check hasn't been set as terminal previously
-            var terminalIndex = -1;
-            for (var i = 0; i < network[stop].length; i++) {
-                if (network[stop][i].id === 0) {
-                    terminalIndex = i;
-                    break;
-                }
-            }
-            if (terminalIndex >= 0) {
-                // remove terminal entry
-                network[stop].splice(terminalIndex, 1);
-                console.log("addStop: (" + stop + ") has been set as terminal, removing");
-            }
             network[stop].push(connections);
             console.log("addStop: (" + stop + ") adding connections [" +
                 connections.id + ", " + connections.route + "])");
+            // check hasn't been set previously
+            var duplicateIndex = -1;
+            for (var i = 0; i < network[stop].length; i++) {
+                for (var j = 0; j < network[stop].length; j++) {
+                    if (i === j) { continue; }
+                    if (network[stop][i].id === network[stop][j].id) {
+                        duplicateIndex = i;
+                        break;
+                    }
+                }
+            }
+            if (duplicateIndex >= 0) {
+                // remove terminal entry
+                network[stop].splice(duplicateIndex, 1);
+                console.log("addStop: (" + stop + ") has been set as terminal, removing");
+            }
+            
         }
     }
 
@@ -115,20 +119,22 @@
 
         while (queue.length > 0) {
             u = shortestDist(queue, distance);
+            console.log("u: " + u);
             for (j = 0; j < queue.length; j++) {
-                if (queue[j] = u) {
+                if (queue[j] == u) {
                     queue.splice(j, 1);
                 }
             }
             if (distance[u] == Infinity) {
-                console.log("infinity check triggered");
+                console.log("infinity check triggered on " + u);
                 break;
             }
             var children = network[u]; // should be neighbours
             for (var c = 0; c < children.length; c++) {
                 if (findInQueue(queue, children[c].id) != -1) {
-                    var v = children[c].id;
+                    var v = children[c].id;                    
                     alt = distance[u] + distanceBetween(u, v, currentRoute);
+                    console.log("v: " + v + ", alt: " + alt);
                     if (alt < distance[v]) {
                         distance[v] = alt;
                         previous[v] = u;
@@ -206,6 +212,11 @@
                     // normal stop
                     addStop(parseInt(stops[i]), { id: parseInt(stops[i + 1]), route: route });
                     console.log("adding " + stops[i] + " to " + stops[i + 1]);
+                    if ((i - 1) >= 0) {
+                        // normal stop
+                        addStop(parseInt(stops[i]), { id: parseInt(stops[i - 1]), route: route });
+                        console.log("adding " + stops[i] + " to " + stops[i - 1]);
+                    }
                 }
             }
         },
