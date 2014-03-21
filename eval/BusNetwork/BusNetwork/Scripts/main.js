@@ -15,27 +15,18 @@
                 if (match != null) {
                     // this is the start end stops
                     console.log("found " + match[1] + match[2]);
-                    var start = match[1];
-                    var finish = match[2];                 
+                    var start = parseInt(match[1]);
+                    var finish = parseInt(match[2]);
                 } else {
                     // must be a route
                     console.log("added " + parts[p])
                     busnetwork.addRoute(parts[p]);
                 }
             }
+            busnetwork.displayNetwork();
             // find a route from start to finish
-            var first = busnetwork.getStop(start);
-            var a = [first], temp = [];
-            for (var i = 0; i <= a.length; i++) {
-                if (a[i] == undefined) {
-                    console.log("end of branch");
-                } else if (a[i].id == finish) {
-                    // we're done
-                    console.log("done " + a[i]);
-                } else {
-                    
-                }
-            }
+            //busnetwork.planJourney(start, finish);
+            busnetwork.dijkstra(start, finish);
         }
         $("#textout").html(textin);
     });
