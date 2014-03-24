@@ -1,4 +1,18 @@
-﻿describe('Graph data structure', function () {
+﻿describe('Graph Structure', function() {
+
+    it('should be able to create an edge with a weight', function() {
+        var e = codeeval.graph.makeEdge(12, "R1:1");
+        expect(e.weight).toBe(12);
+    });
+
+    it('should not be able to create an edge with a negative weight', function() {
+        var e = codeeval.graph.makeEdge(-3, "R2:1");
+        expect(e).toBeUndefined();
+    });
+
+});
+
+xdescribe('V1 Graph data structure', function() {
 
     var vertex, edge;
 
