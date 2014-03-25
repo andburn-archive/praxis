@@ -2,18 +2,27 @@
 
     var graph = {};
 
-    var addVertex =  function(name, id, edges) {
-        graph[name] = {
-            id: id,
-            edges: edges
-        };
+    var addVertex = function(name, id, edge) {
+        if (!graph.hasOwnProperty(name)) {
+            graph[name] = {
+                id: id,
+                edges: []
+            };
+        }
+        graph[name].edges.push(edge);
+        return graph[name];
     };
 
-    var makeVertex = function(id, edges) {
-        var vertex = Object.create(Object);
-        vertex.id = id;
-        vertex.edges = edges;
-        return vertex;
+    var removeVertex = function(name) {
+        if (graph.hasOwnProperty(name)) {
+            return delete graph[name];
+        } else {
+            return false;
+        }
+    };
+
+    var getVertex = function(name) {
+        return graph[name];
     };
 
     var makeEdge = function(weight, vertex_name) {
@@ -28,9 +37,21 @@
         return edge;
     };
 
+    var empty = function() {
+        graph = {};
+    };
+
+    var getGraph = function() {
+        return graph;
+    };
+
     return {
-        makeVertex: makeVertex,
-        makeEdge: makeEdge
+        addVertex: addVertex,
+        makeEdge: makeEdge,
+        empty: empty,
+        removeVertex: removeVertex,
+        getVertex: getVertex,
+        getGraph: getGraph
     };
 
 })();

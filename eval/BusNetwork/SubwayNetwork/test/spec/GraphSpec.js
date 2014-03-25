@@ -1,8 +1,13 @@
 ﻿describe('Graph Structure', function() {
 
-    it('should be able to create an edge with a weight', function() {
+    beforeEach(function() {
+        codeeval.graph.empty();
+    });
+
+    it('should be able to create an edge with a weight and endpoint', function() {
         var e = codeeval.graph.makeEdge(12, "R1:1");
         expect(e.weight).toBe(12);
+        expect(e.vertexName).toBe("R1:1");
     });
 
     it('should not be able to create an edge with a negative weight', function() {
@@ -10,40 +15,29 @@
         expect(e).toBeUndefined();
     });
 
-});
-
-xdescribe('V1 Graph data structure', function() {
-
-    var vertex, edge;
-
-    beforeEach(function () {
-        vertex = codeeval.graph.makeVertex(3, [edge]);
-        edge = codeeval.graph.makeEdge(7, vertex);
+    it('should be able to add a vertex to the graph', function() {
+        var v = codeeval.graph.addVertex("R2:1", 1,
+            codeeval.graph.makeEdge(12, "R1:1"));
+        expect(v.id).toBe(1);
     });
 
-    it('should be able to create an edge with a weight and a vertex', function () {        
-        expect(edge.weight).toBe(7);
-        expect(edge.vertex).toEqual(vertex);
+    it('should be able to delete a vertex from a graph', function() {
+        var v = codeeval.graph.addVertex("R2:1", 1,
+            codeeval.graph.makeEdge(12, "R1:1"));
+        expect(codeeval.graph.removeVertex("R2:1")).toBeTruthy();
     });
 
-    it('should not be able to create an edge without a vertex', function() {
-        var e = codeeval.graph.makeEdge(4);
-        expect(e).toBeUndefined();
-    });
-
-    it('should be able to create a vertex with an id and one or more edges', function () {
-        expect(vertex.edges).toEqual([edge]);
-    });
-
-    it('should be able to create a vertex with id and no edges', function () {
-        var v = codeeval.graph.makeVertex(3);
-        expect(vertex).toBeTruthy();
-        expect(v.edges).toBeUndefined();
-    });
-
-    it('should be able to access id value', function () {
-        expect(vertex.id).toBe(3);
+    it('already has a vertex should be able to add a new edge to it', function() {
+        var v1 = codeeval.graph.addVertex("R2:1", 1,
+            codeeval.graph.makeEdge(12, "R1:1"));
+        var v2 = codeeval.graph.addVertex("R2:1", 1,
+            codeeval.graph.makeEdge(7, "R2:3"));
+        var v = codeeval.graph.getVertex("R2:1");
+        // not robust enough order of addition would matter
+        expect(v.edges).toEqual([
+            { weight: 12, vertexName: 'R1:1' },
+            {weight: 7, vertexName: 'R2:3'}
+        ]);
     });
 
 });
-
