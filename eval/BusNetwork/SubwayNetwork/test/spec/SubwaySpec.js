@@ -38,7 +38,7 @@
     });
 
     it('should be able to find shortest path', function() {
-        var i = codeeval.subway.findShortestPath(graph, 1);
+        var i = codeeval.subway.findShortestPath(graph, 1, 6);
         expect(i).toBe(33);
     });
 

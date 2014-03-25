@@ -45,13 +45,23 @@
         return graph;
     };
 
+
+    var size = function() {
+        var v, count = 0;
+        for (v in graph) {
+            count++;
+        }
+        return count;
+    };
+
     return {
         addVertex: addVertex,
         makeEdge: makeEdge,
         empty: empty,
         removeVertex: removeVertex,
         getVertex: getVertex,
-        getGraph: getGraph
+        getGraph: getGraph,
+        size: size
     };
 
 })();

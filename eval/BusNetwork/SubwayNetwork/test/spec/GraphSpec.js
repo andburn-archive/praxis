@@ -40,4 +40,11 @@
         ]);
     });
 
+    it('should be able to get the number of vertices', function() {
+        expect(codeeval.graph.size()).toBe(0);
+        var v = codeeval.graph.addVertex("R2:1", 1,
+            codeeval.graph.makeEdge(12, "R1:1"));
+        expect(codeeval.graph.size()).toBe(1);
+    });
+
 });
