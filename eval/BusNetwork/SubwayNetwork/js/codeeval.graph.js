@@ -1,6 +1,8 @@
 ﻿codeeval.graph = (function() {
 
     var graph = {};
+	
+	// TODO: make this a general graph, and inherit
 
     var addVertex = function(name, id, edge) {
         if (!graph.hasOwnProperty(name)) {
