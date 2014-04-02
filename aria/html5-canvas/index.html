@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home Page</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Load Stylesheets - Web App -->
+    <!--<link rel="stylesheet" href="css/calculator.css">-->
+</head>
+<body>
+    <div id="container">
+
+        <canvas id="main-canvas" width="600" height="400" 
+            style="border:1px solid black; background-color: beige;"></canvas>
+
+    </div>
+
+    <!-- Load JavaScript here -->
+    <!--<script src="js/jq/jquery-2.1.0.js"></script>-->
+    <!-- Load JavaScript - Web App -->
+    <script>
+        function draw() {
+            var canvas = document.getElementById('main-canvas');
+            var ctx = canvas.getContext('2d');
+            ctx.fillStyle = "red";
+            ctx.fillRect(0, 0, 600, 400);
+        }
+
+        function ward() {
+            var canvas = document.getElementById('main-canvas');
+            h = parseInt(canvas.getAttribute("height")) - 40;
+            w = parseInt(canvas.getAttribute("width")) - 40;
+
+            var ctx = canvas.getContext('2d');
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 2;
+            ctx.fillStyle = "#9ea7b8";
+            ctx.fillRect(20, 20, w, h);
+            
+            // set canvas opacity
+            //canvas.style.opacity = '0.2';
+        }
+
+        draw();
+    </script>
+</body>
+</html>
