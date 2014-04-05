@@ -7,7 +7,7 @@ using SHGolfStore.Domain.Entities;
 
 namespace SHGolfStore.Domain.Abstract
 {
-    interface IBookRepository
+    public interface IBookRepository
     {
         IQueryable<Book> Books { get; }
     }

@@ -171,3 +171,16 @@ div.searchbox {
     color: #000;         
     background-color: #fff;         
 }
+
+/*-------*/
+
+.content-wrapper {
+    width: 80%;
+    margin: auto;
+    background-color: #00ffff;
+    border: 1px solid black;
+}
+
+.main-content {
+
+}

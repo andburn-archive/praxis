@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Ninject;
+using SHGolfStore.Domain.Abstract;
+using SHGolfStore.Domain.Concrete;
 
 namespace SHGolfStore.WebUI.Infrastructure
 {
@@ -18,7 +20,7 @@ namespace SHGolfStore.WebUI.Infrastructure
         }
 
         protected override IController GetControllerInstance(
-                System.Web.Routing.RequestContext, Type controllerType)
+                System.Web.Routing.RequestContext requestContext, Type controllerType)
         {
             return controllerType == null 
                 ? null
@@ -27,7 +29,8 @@ namespace SHGolfStore.WebUI.Infrastructure
 
         private void AddBindings() 
         {
-            // add stuff here
+            ninjectKernel.Bind<IPublisherRepository>().To<EFPublisherRepository>();
+            ninjectKernel.Bind<IBookRepository>().To<EFBookRepository>();
         }
     }
 }

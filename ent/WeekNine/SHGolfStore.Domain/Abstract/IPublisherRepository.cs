@@ -7,8 +7,12 @@ using SHGolfStore.Domain.Entities;
 
 namespace SHGolfStore.Domain.Abstract
 {
-    interface IPublisherRepository
+    public interface IPublisherRepository
     {
         IQueryable<Publisher> Publishers { get; }
+
+        void SavePublisher(Publisher publisher);
+
+        Publisher DeletePublisher(int publisherId);
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SHGolfStore.Domain.Entities
 {
-    class Publisher
+    public class Publisher
     {
         // Primary Key
         public int PublisherId { get; set; }
