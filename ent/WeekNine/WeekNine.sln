@@ -3,7 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHGolfStore.Domain", "SHGolfStore.Domain\SHGolfStore.Domain.csproj", "{524877DE-C13D-4DB4-8384-327691FF2680}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SHGolfStore.WebUI", "SHGolfStore.WebUI\SHGolfStore.WebUI.csproj", "{3B398E66-6158-4949-ADA5-8664049FBD02}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{524877DE-C13D-4DB4-8384-327691FF2680}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{524877DE-C13D-4DB4-8384-327691FF2680}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{524877DE-C13D-4DB4-8384-327691FF2680}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{524877DE-C13D-4DB4-8384-327691FF2680}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B398E66-6158-4949-ADA5-8664049FBD02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B398E66-6158-4949-ADA5-8664049FBD02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B398E66-6158-4949-ADA5-8664049FBD02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B398E66-6158-4949-ADA5-8664049FBD02}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
