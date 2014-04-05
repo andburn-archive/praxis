@@ -1,45 +1,51 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
-@section featured {
-    <section class="featured">
-        <div class="content-wrapper">
-            <hgroup class="title">
-                <h1>@ViewBag.Title.</h1>
-                <h2>@ViewBag.Message</h2>
-            </hgroup>
-            <p>
-                To learn more about ASP.NET MVC visit
-                <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
-                The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET MVC.
-                If you have any questions about ASP.NET MVC visit
-                <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
-            </p>
+﻿
+    <div id='header'>
+        <!-- Header Image Displayes here -->
+    </div>
+    <div id='menu'>
+        <!-- Header Image Displayes here -->
+        <div id="navbar">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Product Catalog</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
         </div>
-    </section>
-}
-<h3>We suggest the following:</h3>
-<ol class="round">
-    <li class="one">
-        <h5>Getting Started</h5>
-        ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-        enables a clean separation of concerns and that gives you full control over markup
-        for enjoyable, agile development. ASP.NET MVC includes many features that enable
-        fast, TDD-friendly development for creating sophisticated applications that use
-        the latest web standards.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245151">Learn more…</a>
-    </li>
+    </div>
+    <div id='container'>
+        <div id='content'>
 
-    <li class="two">
-        <h5>Add NuGet packages and jump-start your coding</h5>
-        NuGet makes it easy to install and update free libraries and tools.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245153">Learn more…</a>
-    </li>
 
-    <li class="three">
-        <h5>Find Web Hosting</h5>
-        You can easily find a web hosting company that offers the right mix of features
-        and price for your applications.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
-    </li>
-</ol>
+            <img src="Images/Site/drivingrange.png" class="floatRight" alt="Model Pict">
+            <h2>Introduction</h2>
+            <p>
+                TLorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel commodo mi. Phasellus dapibus porttitor augue, et porta urna malesuada sed. Nulla fringilla, dui id facilisis posuere, nisi nunc iaculis turpis, non cursus lacus urna et est. Etiam fringilla felis magna. Aliquam erat volutpat. Vestibulum et augue vestibulum erat tempor varius. Ut eu interdum libero. Ut sollicitudin pretium erat. Mauris vulputate magna vitae nunc pharetra commodo. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec cursus libero vel dolor interdum tempor. Curabitur vulputate cursus tortor quis viverra.
+                <br><br>
+                Pellentesque sed metus odio, eu pharetra sapien. Ut facilisis, est a placerat interdum, ipsum arcu malesuada justo, vel fermentum lorem magna ac sem. Vestibulum ultricies ligula id elit commodo facilisis. Suspendisse at convallis lorem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras nec urna ornare felis facilisis vulputate. In sed mi ac arcu facilisis vestibulum sit amet sit amet mi. Curabitur mollis laoreet sapien, a consequat augue porta a. Donec aliquet leo in mauris aliquam eu euismod metus bibendum. Donec at dolor justo. Mauris vestibulum metus dapibus dolor tempus ac tempus tortor elementum.
+                <img src="Images/Site/Green.png" class="floatLeft" alt="Books Example">
+                Vestibulum aliquet accumsan quam id tempor. Suspendisse risus nunc, volutpat sit amet mattis sit amet, interdum ut diam. Suspendisse at dapibus lacus. Morbi porttitor velit sit amet nisl consequat sit amet dictum elit facilisis. Fusce ut luctus enim. Nam scelerisque ultrices diam, id tempor sem faucibus ac. Vestibulum dui justo, fringilla ut aliquet nec, tincidunt ac sem.
+            </p>
+
+            <p>
+                Vestibulum aliquet accumsan quam id tempor. Suspendisse risus nunc, volutpat sit amet mattis sit amet, interdum ut diam. Suspendisse at dapibus lacus. Morbi porttitor velit sit amet nisl consequat sit amet dictum elit facilisis. Fusce ut luctus enim. Nam scelerisque ultrices diam, id tempor sem faucibus ac. Vestibulum dui justo, fringilla ut aliquet nec, tincidunt ac sem.
+                Vestibulum aliquet accumsan quam id tempor. Suspendisse risus nunc, volutpat sit amet mattis sit amet, interdum ut diam. Suspendisse at dapibus lacus. Morbi porttitor velit sit amet nisl consequat sit amet dictum elit facilisis. Fusce ut luctus enim. Nam scelerisque ultrices diam, id tempor sem faucibus ac. Vestibulum dui justo, fringilla ut aliquet nec, tincidunt ac sem.
+            </p>
+
+        </div>
+        <div id='first-column'>
+            <div class="searchbox">
+                <h2 class="BoxHeaders">Search</h2>
+                <input type="text" name="search" /><input type="submit" value="Search" />
+            </div>
+            <div class="box">
+                <h2 class="BoxHeaders">Competition</h2>
+                <img src="Images/Site/Green.png" name="Rotating" id="Rotating1" alt="Special Offers	">
+            </div>
+
+
+        </div>
+    </div>
+    <div id='footer'>
+        <h6 class="footertext">&copy;  SH Golf Store&trade; 2014</h6>
+    </div>
