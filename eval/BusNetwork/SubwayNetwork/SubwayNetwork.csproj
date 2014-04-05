@@ -75,6 +75,7 @@
     <Content Include="test\js\jasmine.js" />
     <Content Include="test\runner.html" />
     <Content Include="test\spec\GraphSpec.js" />
+    <Content Include="test\spec\SubwaySpec.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
