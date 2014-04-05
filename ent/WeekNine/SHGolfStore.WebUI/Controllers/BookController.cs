@@ -22,16 +22,33 @@ namespace SHGolfStore.WebUI.Controllers
             return View(objContext.Books);
         }
 
-        public ActionResult Create()
+        public ActionResult Create(int? id)
         {
-            return View(new Book());
+            if (!id.HasValue)
+            {
+                return View(new Book());
+            }
+            else
+            {
+                Book b = new Book();
+                b.PublisherId = (int)id;
+                return View(b);
+            }
         }
 
         [HttpPost]
         public ActionResult Create(Book book)
         {
             objContext.SaveBook(book);
-            return RedirectToAction("Index");
+
+            if (book.PublisherId == 0)
+            {
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                return RedirectToAction("Publisher", "Publisher", new { id = book.PublisherId });
+            }
         }
 
         public ActionResult Edit(int id)

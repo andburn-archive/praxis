@@ -68,5 +68,12 @@ namespace SHGolfStore.WebUI.Controllers
                 x => x.PublisherId == id).SingleOrDefault();
             return View(publisher);
         }
+
+        public ViewResult Publisher(int id)
+        {
+            Publisher publisher =
+                objContext.Publishers.Where(x => x.PublisherId == id).SingleOrDefault();
+            return View(publisher);
+        }
     }
 }
