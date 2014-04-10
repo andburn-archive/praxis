@@ -19,6 +19,8 @@ namespace Ebuy.Website.Controllers
         {
             ViewBag.Message = "Your app description page.";
 
+            ViewData["SomeMessage"] = "Not using ViewBag";
+
             return View();
         }
 
