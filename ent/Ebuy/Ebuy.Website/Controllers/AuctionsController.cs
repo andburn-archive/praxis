@@ -19,9 +19,19 @@ namespace Ebuy.Website.Controllers
         //
         // GET: /Auctions/Details/5
 
-        public ActionResult Details(int id)
+        public ActionResult Details(int id = 0)
         {
-            return View();
+            var auction = new Ebuy.Website.Models.Auction
+            {
+                Id = id,
+                Title = "Brand new Widget 2.0",
+                Description = "This is a brand new version 2.0 Widget!",
+                StartPrice = 1.00m,
+                CurrentPrice = 13.40m,
+                StartTime = DateTime.Parse("6-15-2012 12:34 PM"),
+                EndTime = DateTime.Parse("6-23-2012 12:34 PM"),
+            };
+            return View(auction);
         }
 
         //
