@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Ebuy.Website.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -28,8 +29,8 @@ namespace Ebuy.Website.Controllers
                 Description = "This is a brand new version 2.0 Widget!",
                 StartPrice = 1.00m,
                 CurrentPrice = 13.40m,
-                StartTime = DateTime.Parse("6-15-2012 12:34 PM"),
-                EndTime = DateTime.Parse("6-23-2012 12:34 PM"),
+                StartTime = DateTime.Parse("2012-6-15 12:34 PM"),
+                EndTime = DateTime.Parse("2012-6-22 12:34 PM"),
             };
             return View(auction);
         }
@@ -46,18 +47,9 @@ namespace Ebuy.Website.Controllers
         // POST: /Auctions/Create
 
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Auction auction)
         {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
+            return View(auction);            
         }
 
         //
