@@ -18,6 +18,7 @@ namespace SHGolfStore.WebUI.Models
         public DbSet<UserProfile> UserProfiles { get; set; }
     }
 
+	// changed here too
     [Table("UserProfile")]
     public class UserProfile
     {
