@@ -17,7 +17,8 @@ namespace SHGolfStore.WebUI.Models
 
         public DbSet<UserProfile> UserProfiles { get; set; }
     }
-
+    
+    // Want to test some merging stuff
     [Table("UserProfile")]
     public class UserProfile
     {
