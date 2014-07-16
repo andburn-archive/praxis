@@ -1,4 +1,4 @@
 Exploratory Coding
 ======
 
-Coding practice and exploration
+Coding practice and exploration all in one repo
