@@ -1,4 +1,4 @@
-praxis
+Exploratory Coding
 ======
 
 Coding practice and exploration
