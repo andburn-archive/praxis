@@ -41,6 +41,7 @@ var watchGeo = function() {
 
         map.entities.clear();
         map.entities.push(new Microsoft.Maps.Pushpin(loc));
+        map.setView({center: loc});
         //console.log("new watch update");
     }, errorCase);
 };
