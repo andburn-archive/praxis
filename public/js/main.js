@@ -41,11 +41,11 @@ var watchGeo = function() {
 
         map.entities.clear();
         map.entities.push(new Microsoft.Maps.Pushpin(loc));
-        console.log("new watch update");
+        //console.log("new watch update");
     }, errorCase, optns);
 };
 
 var errorCase = function(err) {
     alert('ERROR(' + err.code + '): ' + err.message);
-    console.log("new watch update - failed");
+    //console.log("new watch update - failed");
 };
