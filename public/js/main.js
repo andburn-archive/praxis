@@ -42,7 +42,7 @@ var watchGeo = function() {
         map.entities.clear();
         map.entities.push(new Microsoft.Maps.Pushpin(loc));
         //console.log("new watch update");
-    }, errorCase, optns);
+    }, errorCase);
 };
 
 var errorCase = function(err) {
