@@ -1,0 +1,18 @@
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+	$(function() {
+		$.ajax({ url: 'http://localhost:3030/locations',
+			type: 'POST',
+			beforeSend: function(xhr) {
+				xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))
+			},
+			data: { location: {lat: -22, long: 34, time: "2014112619:20"} },
+			success: function(response) {
+				console.log("post sucess");
+			},
+			error: function(err) {
+				console.log("post failure");
+			}
+		});
+	});
+</script>
