@@ -41,3 +41,5 @@ gem 'spring',        group: :development
 gem "devise"
 
 gem "foundation-rails"
+
+gem "rails_layout", group: :development
