@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Rails.application.routes.draw do
   
   devise_for :users
@@ -62,6 +63,8 @@ Rails.application.routes.draw do
   #   end
 end
 =======
+=======
+>>>>>>> Stashed changes
 Rails.application.routes.draw do
   
   root 'home#index'
@@ -125,4 +128,7 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
 end
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

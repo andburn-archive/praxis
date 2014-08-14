@@ -1,4 +1,5 @@
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 source 'https://rubygems.org'
 
 
@@ -45,6 +46,8 @@ gem "foundation-rails"
 
 gem "rails_layout", group: :development
 =======
+=======
+>>>>>>> Stashed changes
 source 'https://rubygems.org'
 
 
@@ -85,5 +88,9 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+<<<<<<< Updated upstream
+gem 'puma'
+>>>>>>> Stashed changes
+=======
 gem 'puma'
 >>>>>>> Stashed changes
