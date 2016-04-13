@@ -1,4 +1,4 @@
 Exploratory Coding
 ========
 
-Coding practice and exploration all in one repo. A place to test things out.
+Coding practice and exploration. A place to test things out.
